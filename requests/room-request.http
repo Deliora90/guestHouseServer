@@ -1,0 +1,96 @@
+### Create types
+POST http://localhost:5000/api/types HTTP/1.1
+content-type: application/json
+
+{
+   "type": "2-Х МЕСТНЫЙ", 
+   "descriptions": "Небольшой и очень уютный светлый номер расположен на 1 этаже, что очень удобно для пожилых людей.", 
+   "cost": 1498.00, 
+   "additionalCost": 1000.00,
+   "costFood": 500.00,
+   "mainPicture": "-",
+   "square": 11,
+   "sleepingPlaces": 2, 
+   "maxGuests": 2,
+   "equipment": "Оснащение номера: Комплект банных принадлежностей, мини-холодильник, современный телевизор с кабельными каналами, кондиционер",
+   "payment": 30,
+   "photos": ["-", "-"],
+
+   "rooms": [
+   {
+      "number": "1"
+   }, 
+   {
+      "number": "2"
+   }, 
+   {
+      "number": "3"
+   },
+   {
+      "number": "4"
+   }]
+}
+
+### Create types 2
+POST http://localhost:5000/api/types HTTP/1.1
+content-type: application/json
+
+{
+   "type": "СЕМЕЙНЫЙ", 
+   "descriptions": "Идеальный выбор для семейного отдыха в Абхазии! Просторный трехместный номер с возможностью установки дополнительной кровати позволяет это!", 
+   "cost": 2247.00, 
+   "additionalCost": 1000.00,
+   "costFood": 500.50,
+   "mainPicture": "-",
+   "square": 18,
+   "sleepingPlaces": "1 односпальная и 1 двуспальная кровать", 
+   "maxGuests": 4,
+   "equipment": " Комплект банных принадлежностей, мини-холодильник, современный телевизор с кабельными каналами, кондиционер",
+   "payment": 30,
+   "photos": ["-", "-"],
+   "rooms": [
+   {
+      "number": "1"
+   }, 
+   {
+      "number": "2"
+   }, 
+   {
+      "number": "3"
+   }]
+}
+
+### GetAll
+
+POST http://localhost:5000/api/types/getAll HTTP/1.1
+content-type: application/json
+
+{
+   "dateIn": "2021-07-27", 
+   "dateOut": "2021-08-03",
+   "amountPerson": "2"
+}
+
+### Book
+
+POST http://localhost:5000/api/room/book HTTP/1.1
+content-type: application/json
+
+{
+   "typeId": "611678269245fd1144ff4e98",
+   "dateIn": "2021-08-01", 
+   "dateOut": "2021-08-03",
+   "amountPerson": "2",
+   "userId": "611678199245fd1144ff4e93",
+   "withFood": false
+}
+
+### Unbook
+
+POST http://localhost:5000/api/room/unbook HTTP/1.1
+content-type: application/json
+
+{
+   "userId": "611678199245fd1144ff4e93", 
+   "roomId": "611678269245fd1144ff4e99"
+}

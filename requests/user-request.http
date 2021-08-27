@@ -1,0 +1,41 @@
+### Registration
+POST http://localhost:5000/api/registration HTTP/1.1
+content-type: application/json
+
+{
+   "email": "deliora90@gmail.com",
+   "password": "12sdsdsd",
+   "suraname": "sdsad",
+   "name": "dfdfd",
+   "middleName": "sdfsdsd",
+   "phoneNumber": "23423423",
+   "homePhoneNumber": "23423423",
+   "town": "dfgdfgfdg"
+}
+
+### Login
+POST http://localhost:5000/api/login HTTP/1.1
+content-type: application/json
+
+{
+   "email": "deliora90@gmail.com",
+   "password": "12sdsdsd"
+}
+
+### Logout
+POST http://localhost:5000/api/logout HTTP/1.1
+content-type: application/json
+
+{
+   "email": "user@gmail.com",
+   "password": "12sdsdsd"
+}
+
+### Refresh
+
+GET http://localhost:5000/api/refresh HTTP/1.1
+
+### GetUsers
+
+GET http://localhost:5000/api/users HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlvcmE5MEBnbWFpbC5jb20iLCJpZCI6IjYxMTI3YjlmODMxZTc2MzU0NDNkYzMyNiIsImlzQWN0aXZhdGVkIjpmYWxzZSwiaWF0IjoxNjI4NjA2MTgzLCJleHAiOjE2Mjg2MDYyMTN9.X1n9gJU4tC66Z6sKYCAIJOs86V8NlyP3fgpRHHiWLro
